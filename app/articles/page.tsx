@@ -5,34 +5,38 @@ import { WaterTextAnimation } from "@/components/water-text-animation"
 import Image from "next/image"
 import Link from "next/link"
 
-const articles = [
-  {
-    title: "Как почистить стиральную машину?",
-    description: "Пошаговая инструкция по очистке стиральной машины от накипи и загрязнений",
-    image: "/images/washing-machine-cleaning.jpg",
-    slug: "how-to-clean-washing-machine",
-  },
-  {
-    title: "Как правильно пользоваться стиральной машиной?",
-    description: "Советы по эффективному использованию и продлению срока службы вашей стиральной машины",
-    image: "/images/washing-machine-usage.jpg",
-    slug: "how-to-use-washing-machine",
-  },
-  {
-    title: "Частые поломки стиральных машин",
-    description: "Обзор самых распространенных неисправностей и способы их устранения",
-    image: "/images/washing-machine-repairs.jpg",
-    slug: "common-washing-machine-problems",
-  },
-  {
-    title: "Застряла жена в стиральной машине что делать?",
-    description: "Юмористическая статья о безопасности использования стиральной машины",
-    image: "/images/washing-machine-safety.jpg",
-    slug: "washing-machine-safety",
-  },
-]
+export default function ArticlesPage({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined }
+}) {
+  const articles = [
+    {
+      title: "Как почистить стиральную машину?",
+      description: "Пошаговая инструкция по очистке стиральной машины от накипи и загрязнений",
+      image: "/images/washing-machine-cleaning.jpg",
+      slug: "how-to-clean-washing-machine",
+    },
+    {
+      title: "Как правильно пользоваться стиральной машиной?",
+      description: "Советы по эффективному использованию и продлению срока службы вашей стиральной машины",
+      image: "/images/washing-machine-usage.jpg",
+      slug: "how-to-use-washing-machine",
+    },
+    {
+      title: "Частые поломки стиральных машин",
+      description: "Обзор самых распространенных неисправностей и способы их устранения",
+      image: "/images/washing-machine-repairs.jpg",
+      slug: "common-washing-machine-problems",
+    },
+    {
+      title: "Застряла жена в стиральной машине что делать?",
+      description: "Юмористическая статья о безопасности использования стиральной машины",
+      image: "/images/washing-machine-safety.jpg",
+      slug: "washing-machine-safety",
+    },
+  ]
 
-export default function ArticlesPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-20">

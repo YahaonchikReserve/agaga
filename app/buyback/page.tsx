@@ -12,7 +12,11 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
-export default function BuybackPage() {
+export default function BuybackPage({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined }
+}) {
   const [showContactForm, setShowContactForm] = useState(false)
   const [phoneNumber, setPhoneNumber] = useState("")
   const [brand, setBrand] = useState("")

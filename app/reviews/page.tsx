@@ -8,28 +8,32 @@ import { Label } from "@/components/ui/label"
 import { Star } from "lucide-react"
 import { WaterTextAnimation } from "@/components/water-text-animation"
 
-const reviews = [
-  {
-    name: "Анна Петрова",
-    rating: 5,
-    text: "Отличный сервис! Мастер приехал вовремя, быстро определил проблему и качественно отремонтировал машинку. Теперь работает как новая!",
-    date: "2024-03-15",
-  },
-  {
-    name: "Игорь Сидоров",
-    rating: 5,
-    text: "Профессиональный подход и честные цены. Рекомендую всем, кто ищет надежный ремонт стиральных машин.",
-    date: "2024-03-10",
-  },
-  {
-    name: "Мария Иванова",
-    rating: 4,
-    text: "Хороший сервис, мастер очень вежливый и компетентный. Единственное - хотелось бы более точного определения времени приезда.",
-    date: "2024-03-05",
-  },
-]
+export default function ReviewsPage({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined }
+}) {
+  const reviews = [
+    {
+      name: "Анна Петрова",
+      rating: 5,
+      text: "Отличный сервис! Мастер приехал вовремя, быстро определил проблему и качественно отремонтировал машинку. Теперь работает как новая!",
+      date: "2024-03-15",
+    },
+    {
+      name: "Игорь Сидоров",
+      rating: 5,
+      text: "Профессиональный подход и честные цены. Рекомендую всем, кто ищет надежный ремонт стиральных машин.",
+      date: "2024-03-10",
+    },
+    {
+      name: "Мария Иванова",
+      rating: 4,
+      text: "Хороший сервис, мастер очень вежливый и компетентный. Единственное - хотелось бы более точного определения времени приезда.",
+      date: "2024-03-05",
+    },
+  ]
 
-export default function ReviewsPage() {
   const [name, setName] = useState("")
   const [rating, setRating] = useState(5)
   const [review, setReview] = useState("")
